@@ -1,0 +1,54 @@
+@import './partials/layout';
+@import './partials/typography';
+
+.hero {
+  @include box-layout;
+  padding-left: 50px;
+  padding-right: 50px;
+  min-height: calc(100vh - 80px);
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  h1 {
+    font-size: $font-size-xlarge;
+    color: var(--primary);
+    font-weight: 900;
+  }
+  &__meta {
+    max-width: 700px;
+  }
+
+  &__socials {
+    margin-top: 2rem;
+    ul {
+      list-style: none;
+      display: flex;
+      li {
+        width: 50px;
+        height: 50px;
+        background: #ffffff;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.07);
+        border-radius: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .hero {
+    padding-left: 0;
+    padding-right: 0;
+    h1 {
+      font-size: $font-size-large;
+    }
+
+    &__socials {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

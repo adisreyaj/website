@@ -1,5 +1,6 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from 'next/head';
+import styles from '../styles/Home.module.scss';
+import Header from '../components/Header/Header';
 
 export default function Home() {
   return (
@@ -8,58 +9,60 @@ export default function Home() {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
+      <Header />
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
+        <section className={styles.hero}>
+          <p>Hi I'm,</p>
+          <h1>Adithya Sreyaj</h1>
+          <div className={styles['hero__meta']}>
             <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
+              I love to code beautiful applications for the world. When I am not
+              coding, I'll be thinking of Ideas and reading articles or blogs
+              about coding.
             </p>
-          </a>
-        </div>
+            <br />
+            <br />
+            <p>
+              I work as a UI Engineer at{' '}
+              <span className="emphasis">Hypersonix</span>
+            </p>
+          </div>
+          <SocialIconsHero />
+        </section>
+        <section className={styles.about}></section>
+        <section className={styles.skills}></section>
+        <section className={styles.projects}></section>
       </main>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+      <footer className={styles.footer}></footer>
     </div>
-  )
+  );
 }
+
+const SocialIconsHero = () => {
+  return (
+    <div className={styles['hero__socials']}>
+      <ul>
+        <li>
+          <img src="/social/github.svg" alt="Github" height="24" width="24" />
+        </li>
+        <li>
+          <img
+            src="/social/twitter.svg"
+            alt="Twitter Profile"
+            height="24"
+            width="24"
+          />
+        </li>
+        <li>
+          <img
+            src="/social/linkedin.svg"
+            alt="Linkedin Profile"
+            height="24"
+            width="24"
+          />
+        </li>
+      </ul>
+    </div>
+  );
+};

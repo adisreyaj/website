@@ -1,0 +1,36 @@
+@import './partials/reset';
+@import url('https://rsms.me/inter/inter.css');
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+
+  color: #292e31;
+}
+* {
+  box-sizing: border-box;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.8em;
+  letter-spacing: -0.014em;
+  font-feature-settings: 'ss03', 'zero', 'cv08', 'cv11' 1;
+  span {
+    &.emphasis {
+      color: var(--primary);
+      font-weight: 600;
+    }
+  }
+}
+h1 {
+  line-height: 0.9em;
+  margin: 0.2em 0 0.6em;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@import './partials/colors';
