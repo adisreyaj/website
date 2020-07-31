@@ -7,37 +7,37 @@ import ProjectItem from '../components/ProjectItem/ProjectItem';
 
 const projects = [
   {
-    image: '/Portfolio/Xpense.png',
+    image: 'Xpense',
     title: 'Xpense Tracker',
     subtitle: 'Expense tracker app',
   },
   {
-    image: '/Portfolio/Best of JS.png',
+    image: 'Best-of-JS',
     title: 'Best of JS',
     subtitle: 'Best JS Repositories app UI',
   },
   {
-    image: '/Portfolio/Moovee App.png',
+    image: 'Moovee',
     title: 'Moovee',
     subtitle: 'Movie curation app UI',
   },
   {
-    image: '/Portfolio/Payment.png',
+    image: 'Payments',
     title: 'Payments UI',
     subtitle: 'Payments page interaction UI',
   },
   {
-    image: '/Portfolio/Pill Box.png',
+    image: 'Pill-Box',
     title: 'IoT Pill Box',
     subtitle: 'IoT Medicine tracker app UI',
   },
   {
-    image: '/Portfolio/Quik Jobs.png',
+    image: 'Quik-Jobs',
     title: 'Quik Jobs',
     subtitle: 'Job Finder app UI',
   },
   {
-    image: '/Portfolio/Storage.png',
+    image: 'Storage',
     title: 'Fyl Manager',
     subtitle: 'File Manager app UI',
   },

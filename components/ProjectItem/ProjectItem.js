@@ -27,7 +27,13 @@ export default function ProjectItem({
         </div>
       </section>
       <section className={styles['project-item__image-section']}>
-        <img src={image} alt="Best Of JS" />
+        <picture>
+          <source
+            srcSet={`/Portfolio/2x/${image}.webp 1000w,/Portfolio/1x/${image}_500x.webp 500w, `}
+            type="image/webp"
+          />
+          <img src={`/Portfolio/2x/${image}.png`} alt={title} />
+        </picture>
       </section>
     </div>
   );
