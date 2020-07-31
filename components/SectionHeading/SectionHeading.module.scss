@@ -1,0 +1,32 @@
+@import '../../styles/partials/typography';
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin-bottom: 2rem;
+  &__info {
+    display: flex;
+    flex-flow: column;
+  }
+
+  &__title {
+    font-size: $font-size-medium;
+    font-weight: 600;
+    margin-left: 2rem;
+    &:before {
+      content: '';
+      width: 20px;
+      height: 25px;
+      margin-left: -2rem;
+      position: absolute;
+      background-color: var(--primary);
+      margin-right: 0.5rem;
+    }
+  }
+
+  &__subtitle {
+    margin-top: 1rem;
+    color: var(--text-secondary);
+    font-size: 1rem;
+  }
+}

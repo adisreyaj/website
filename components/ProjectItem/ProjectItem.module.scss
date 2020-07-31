@@ -1,0 +1,79 @@
+@import '../../styles/partials/typography';
+.project-item {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  &__info-section {
+    order: 1;
+    flex: 48%;
+    display: flex;
+    align-items: center;
+  }
+  &__image-section {
+    order: 2;
+    flex: 48%;
+    img {
+      height: 500px;
+      width: 500px;
+    }
+  }
+
+  &[data-position='right'] {
+    .project-item__info-section {
+      order: 2;
+    }
+    .project-item__image-section {
+      order: 1;
+    }
+  }
+}
+
+.info {
+  &__heading {
+    margin-bottom: 2rem;
+    h3 {
+      font-weight: 500;
+      font-size: $font-size-medium;
+      &:before {
+        content: '►';
+        font-size: 1rem;
+        padding-right: 0.5rem;
+        color: var(--primary);
+      }
+    }
+    p {
+      font-size: 1rem;
+      color: var(--text-secondary);
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .project-item {
+    &__image-section {
+      flex: 100%;
+      order: 2 !important;
+      margin-bottom: 5rem;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    &__info-section {
+      flex: 100%;
+      order: 1 !important;
+      margin-bottom: 3rem;
+    }
+
+    &[data-position='right'] {
+      .project-item__info-section {
+        order: 1;
+      }
+      .project-item__image-section {
+        order: 2;
+      }
+    }
+  }
+}

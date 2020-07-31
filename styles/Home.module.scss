@@ -3,8 +3,6 @@
 
 .hero {
   @include box-layout;
-  padding-left: 50px;
-  padding-right: 50px;
   min-height: calc(100vh - 80px);
   display: flex;
   flex-flow: column wrap;
@@ -38,17 +36,20 @@
   }
 }
 
+.projects {
+  @include box-layout;
+}
+
+.footer {
+  margin-bottom: 20rem;
+}
+
 @media screen and (max-width: 600px) {
   .hero {
     padding-left: 0;
     padding-right: 0;
     h1 {
       font-size: $font-size-large;
-    }
-
-    &__socials {
-      display: flex;
-      justify-content: center;
     }
   }
 }
