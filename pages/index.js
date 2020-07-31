@@ -64,7 +64,7 @@ export default function Home() {
             <br />
             <br />
             <p>
-              I work as a UI Engineer at
+              I work as a UI Engineer at &nbsp;
               <span className="emphasis">Hypersonix</span>
             </p>
           </div>
@@ -79,7 +79,7 @@ export default function Home() {
           />
           <div>
             {projects.map((item, i) => (
-              <ProjectItem {...item} index={i} />
+              <ProjectItem {...item} index={i} key={i} />
             ))}
           </div>
         </section>
