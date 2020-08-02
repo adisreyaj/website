@@ -1,10 +1,16 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.scss';
 import Header from '../components/Header/Header';
-import { useEffect } from 'react';
+import { useEffect, useMemo } from 'react';
 import SectionHeading from '../components/SectionHeading/SectionHeading';
 import ProjectItem from '../components/ProjectItem/ProjectItem';
-
+import {
+  motion,
+  AnimatePresence,
+  useViewportScroll,
+  useTransform,
+} from 'framer-motion';
+import IntersectionContainer from '../components/IntersectionContainer';
 const projects = [
   {
     image: 'Xpense',
@@ -146,49 +152,60 @@ const projects = [
 ];
 
 export default function Home() {
+  const { scrollYProgress } = useViewportScroll();
+  console.log(scrollYProgress);
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Adithya Sreyaj - Full Stack Developer</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <Header />
-      <main className={styles.main}>
-        <section className={[styles.hero, 'js-hero'].join(' ')}>
-          <p>Hi I'm,</p>
-          <h1>Adithya Sreyaj</h1>
-          <div className={styles['hero__meta']}>
-            <p>
-              I love to code beautiful applications for the world. When I am not
-              coding, I'll be thinking of Ideas and reading articles or blogs
-              about coding.
-            </p>
-            <br />
-            <br />
-            <p>
-              I work as a UI Engineer at &nbsp;
-              <span className="emphasis">Hypersonix</span>
-            </p>
-          </div>
-          <SocialIconsHero />
-        </section>
-        <section className={styles.about}></section>
-        <section className={styles.skills}></section>
-        <section className={styles.projects}>
-          <SectionHeading
-            title="Stuffs I've done"
-            subtitle="Here are some of the projects that I've done during my free time. You can find mock UIs, Full-stack Web Applications, Mobile Applications and more"
-          />
-          <div>
-            {projects.map((item, i) => (
-              <ProjectItem {...item} index={i} key={i} />
-            ))}
-          </div>
-        </section>
-      </main>
+    <AnimatePresence>
+      <div className={styles.container}>
+        <Head>
+          <title>Adithya Sreyaj - Full Stack Developer</title>
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
+        <Header />
+        <main className={styles.main}>
+          <section className={[styles.hero, 'js-hero'].join(' ')}>
+            <p>Hi I'm,</p>
+            <h1>Adithya Sreyaj</h1>
+            <div className={styles['hero__meta']}>
+              <p>
+                I love to code beautiful applications for the world. When I am
+                not coding, I'll be thinking of Ideas and reading articles or
+                blogs about coding.
+              </p>
+              <br />
+              <br />
+              <p>
+                I work as a UI Engineer at &nbsp;
+                <span className="emphasis">Hypersonix</span>
+              </p>
+            </div>
+            <SocialIconsHero />
+          </section>
+          <section className={styles.about}></section>
+          <section className={styles.skills}></section>
+          <section className={styles.projects}>
+            <SectionHeading
+              title="Stuffs I've done"
+              subtitle="Here are some of the projects that I've done during my free time. You can find mock UIs, Full-stack Web Applications, Mobile Applications and more"
+            />
+            <div>
+              {projects.map((item, i) => (
+                <IntersectionContainer>
+                  <ProjectItem
+                    className="js-project-item"
+                    {...item}
+                    index={i}
+                    key={i}
+                  />
+                </IntersectionContainer>
+              ))}
+            </div>
+          </section>
+        </main>
 
-      <footer className={styles.footer}></footer>
-    </div>
+        <footer className={styles.footer}></footer>
+      </div>
+    </AnimatePresence>
   );
 }
 

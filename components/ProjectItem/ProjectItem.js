@@ -1,4 +1,8 @@
+import { useMemo, useContext } from 'react';
+import { motion } from 'framer-motion';
+
 import styles from './ProjectItem.module.scss';
+import { IntersectionContext } from '../IntersectionContainer';
 
 export default function ProjectItem({
   description,
@@ -8,8 +12,34 @@ export default function ProjectItem({
   index,
   stack,
 }) {
+  const { inView } = useContext(IntersectionContext);
+  const transition = useMemo(
+    () => ({
+      duration: 0.5,
+      ease: [0.42, 0, 0.58, 1],
+    }),
+    [index],
+  );
+
+  const variants = {
+    hidden: {
+      scale: 0,
+      opacity: 0,
+      transition,
+    },
+    show: {
+      scale: 1,
+      opacity: 1,
+      transition,
+    },
+  };
   return (
-    <div
+    <motion.div
+      initial="hidden"
+      animate={inView ? 'show' : 'hidden'}
+      exit="hidden"
+      variants={variants}
+      iv
       className={styles['project-item']}
       data-position={index % 2 === 0 ? 'right' : 'left'}
     >
@@ -31,7 +61,10 @@ export default function ProjectItem({
             <div className={styles['info__tech-stack-items']}>
               {stack.map((item) => {
                 return (
-                  <div className={styles['info__tech-stack-item']}>
+                  <div
+                    key={item.name}
+                    className={styles['info__tech-stack-item']}
+                  >
                     <img
                       src={`/technologies/${item.logo}.svg`}
                       alt={item.name}
@@ -55,6 +88,6 @@ export default function ProjectItem({
           <img src={`/Portfolio/2x/${image}.png`} alt={title} />
         </picture>
       </section>
-    </div>
+    </motion.div>
   );
 }
