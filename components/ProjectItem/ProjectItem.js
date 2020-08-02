@@ -6,6 +6,7 @@ export default function ProjectItem({
   title,
   subtitle,
   index,
+  stack,
 }) {
   return (
     <div
@@ -24,10 +25,29 @@ export default function ProjectItem({
             et. Tempore dolores quibusdam reiciendis esse corrupti quam quidem
             in repudiandae?
           </p>
+
+          <div className={styles['info__tech-stack']}>
+            <h3>Tech Stack</h3>
+            <div className={styles['info__tech-stack-items']}>
+              {stack.map((item) => {
+                return (
+                  <div className={styles['info__tech-stack-item']}>
+                    <img
+                      src={`/technologies/${item.logo}.svg`}
+                      alt={item.name}
+                      height="35"
+                    />
+                    <p>{item.name}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
         </div>
       </section>
+      <div className={styles['project-item__section-divider']}></div>
       <section className={styles['project-item__image-section']}>
-        <picture>
+        <picture className="js-project-image">
           <source
             srcSet={`/Portfolio/2x/${image}.webp 1000w,/Portfolio/1x/${image}_500x.webp 500w, `}
             type="image/webp"
