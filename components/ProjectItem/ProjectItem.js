@@ -16,7 +16,7 @@ export default function ProjectItem({
   const transition = useMemo(
     () => ({
       duration: 0.5,
-      ease: [0.42, 0, 0.58, 1],
+      ease: [0.17, 0.67, 0.73, 1.03],
     }),
     [index],
   );
@@ -39,7 +39,6 @@ export default function ProjectItem({
       animate={inView ? 'show' : 'hidden'}
       exit="hidden"
       variants={variants}
-      iv
       className={styles['project-item']}
       data-position={index % 2 === 0 ? 'right' : 'left'}
     >

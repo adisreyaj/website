@@ -10,7 +10,7 @@ const IntersectionContainer = ({
   const [inView, setInView] = useState(false);
   const intersectionRef = React.useRef(null);
   const intersection = useIntersection(intersectionRef, {
-    threshold: 0,
+    threshold: 0.3,
   });
 
   useEffect(() => {

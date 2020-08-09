@@ -1,6 +1,7 @@
 @import '../../styles/partials/typography';
 .project-item {
   display: flex;
+  will-change: transform;
   flex-flow: row wrap;
   justify-content: space-between;
   margin-top: 5rem;

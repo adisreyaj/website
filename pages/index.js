@@ -190,12 +190,11 @@ export default function Home() {
             />
             <div>
               {projects.map((item, i) => (
-                <IntersectionContainer>
+                <IntersectionContainer key={i}>
                   <ProjectItem
                     className="js-project-item"
                     {...item}
                     index={i}
-                    key={i}
                   />
                 </IntersectionContainer>
               ))}
