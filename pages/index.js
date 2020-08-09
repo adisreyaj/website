@@ -1,172 +1,62 @@
 import Head from 'next/head';
-import styles from '../styles/Home.module.scss';
-import Header from '../components/Header/Header';
-import { useEffect, useMemo } from 'react';
-import SectionHeading from '../components/SectionHeading/SectionHeading';
-import ProjectItem from '../components/ProjectItem/ProjectItem';
 import {
   motion,
   AnimatePresence,
   useViewportScroll,
   useTransform,
 } from 'framer-motion';
-import IntersectionContainer from '../components/IntersectionContainer';
-const projects = [
-  {
-    image: 'Xpense',
-    title: 'Xpense Tracker',
-    subtitle: 'Expense tracker app',
-    stack: [
-      {
-        name: 'React Native',
-        logo: 'react-native',
-      },
-      {
-        name: 'Expo',
-        logo: 'expo',
-      },
-      {
-        name: 'JavaScript',
-        logo: 'javascript',
-      },
-    ],
-  },
-  {
-    image: 'Best-of-JS',
-    title: 'Best of JS',
-    subtitle: 'Best JS Repositories app UI',
-    stack: [
-      {
-        name: 'React Native',
-        logo: 'react-native',
-      },
-      {
-        name: 'Expo',
-        logo: 'expo',
-      },
-      {
-        name: 'JavaScript',
-        logo: 'javascript',
-      },
-    ],
-  },
-  {
-    image: 'Moovee',
-    title: 'Moovee',
-    subtitle: 'Movie curation app UI',
-    stack: [
-      {
-        name: 'React Native',
-        logo: 'react-native',
-      },
-      {
-        name: 'Expo',
-        logo: 'expo',
-      },
-      {
-        name: 'Redux',
-        logo: 'redux',
-      },
-      {
-        name: 'TypeScript',
-        logo: 'typescript',
-      },
-    ],
-  },
-  {
-    image: 'Payments',
-    title: 'Payments UI',
-    subtitle: 'Payments page interaction UI',
-    stack: [
-      {
-        name: 'React Native',
-        logo: 'react-native',
-      },
-      {
-        name: 'Expo',
-        logo: 'expo',
-      },
-      {
-        name: 'JavaScript',
-        logo: 'javascript',
-      },
-    ],
-  },
-  {
-    image: 'Pill-Box',
-    title: 'IoT Pill Box',
-    subtitle: 'IoT Medicine tracker app UI',
-    stack: [
-      {
-        name: 'React Native',
-        logo: 'react-native',
-      },
-      {
-        name: 'Expo',
-        logo: 'expo',
-      },
-      {
-        name: 'TypeScript',
-        logo: 'typescript',
-      },
-    ],
-  },
-  {
-    image: 'Quik-Jobs',
-    title: 'Quik Jobs',
-    subtitle: 'Job Finder app UI',
-    stack: [
-      {
-        name: 'React Native',
-        logo: 'react-native',
-      },
-      {
-        name: 'Expo',
-        logo: 'expo',
-      },
-      {
-        name: 'JavaScript',
-        logo: 'javascript',
-      },
-    ],
-  },
-  {
-    image: 'Storage',
-    title: 'Fyl Manager',
-    subtitle: 'File Manager app UI',
-    stack: [
-      {
-        name: 'React Native',
-        logo: 'react-native',
-      },
-      {
-        name: 'Expo',
-        logo: 'expo',
-      },
-      {
-        name: 'JavaScript',
-        logo: 'javascript',
-      },
-    ],
-  },
-];
 
-export default function Home() {
+import styles from '../styles/Home.module.scss';
+import Header from '../components/Header/Header';
+import SectionHeading from '../components/SectionHeading/SectionHeading';
+import ProjectItem from '../components/ProjectItem/ProjectItem';
+import IntersectionContainer from '../components/IntersectionContainer';
+import { ENDPOINTS } from '../config/endpoints';
+
+export default function Home({ projects }) {
   const { scrollYProgress } = useViewportScroll();
-  console.log(scrollYProgress);
+
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const item = {
+    hidden: {
+      opacity: 0,
+      y: 20,
+      transition: { duration: 0.5, ease: [0.17, 0.67, 0.73, 1.03] },
+    },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, ease: [0.17, 0.67, 0.73, 1.03] },
+    },
+  };
   return (
     <AnimatePresence>
       <div className={styles.container}>
         <Head>
           <title>Adithya Sreyaj - Full Stack Developer</title>
           <link rel="icon" href="/favicon.ico" />
+          <meta name="theme-color" content="#083d77" />
         </Head>
         <Header />
         <main className={styles.main}>
-          <section className={[styles.hero, 'js-hero'].join(' ')}>
-            <p>Hi I'm,</p>
-            <h1>Adithya Sreyaj</h1>
-            <div className={styles['hero__meta']}>
+          <motion.section
+            className={[styles.hero, 'js-hero'].join(' ')}
+            variants={container}
+            initial="hidden"
+            animate="show"
+          >
+            <motion.p variants={item}>Hi I'm,</motion.p>
+            <motion.h1 variants={item}>Adithya Sreyaj</motion.h1>
+            <motion.div className={styles['hero__meta']} variants={item}>
               <p>
                 I love to code beautiful applications for the world. When I am
                 not coding, I'll be thinking of Ideas and reading articles or
@@ -178,9 +68,11 @@ export default function Home() {
                 I work as a UI Engineer at &nbsp;
                 <span className="emphasis">Hypersonix</span>
               </p>
-            </div>
-            <SocialIconsHero />
-          </section>
+            </motion.div>
+            <motion.div variants={item}>
+              <SocialIconsHero />
+            </motion.div>
+          </motion.section>
           <section className={styles.about}></section>
           <section className={styles.skills}></section>
           <section className={styles.projects}>
@@ -235,3 +127,12 @@ const SocialIconsHero = () => {
     </div>
   );
 };
+
+export async function getStaticProps() {
+  const projects = await fetch(ENDPOINTS.portfolio).then((res) => res.json());
+  return {
+    props: {
+      projects,
+    },
+  };
+}

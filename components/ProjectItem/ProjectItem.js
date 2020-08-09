@@ -42,6 +42,9 @@ export default function ProjectItem({
       className={styles['project-item']}
       data-position={index % 2 === 0 ? 'right' : 'left'}
     >
+      <div className={styles['project-item__number']}>
+        <p>{index + 1}</p>
+      </div>
       <section className={styles['project-item__info-section']}>
         <div>
           <div className={styles['info__heading']}>

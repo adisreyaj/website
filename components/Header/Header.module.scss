@@ -14,6 +14,12 @@
   align-items: center;
 }
 
+.mobile-menu {
+  &__icon {
+    display: none;
+  }
+}
+
 .main-nav {
   ul {
     list-style: none;
@@ -27,5 +33,14 @@
 @media screen and (max-width: 600px) {
   .header-container {
     width: 90%;
+  }
+  .mobile-menu {
+    &__icon {
+      display: block;
+    }
+  }
+
+  .main-nav {
+    display: none;
   }
 }
