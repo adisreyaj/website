@@ -1,0 +1,139 @@
+[
+  {
+    "image": "Xpense",
+    "title": "Xpense Tracker",
+    "subtitle": "Expense tracker app",
+    "stack": [
+      {
+        "name": "React Native",
+        "logo": "react-native"
+      },
+      {
+        "name": "Expo",
+        "logo": "expo"
+      },
+      {
+        "name": "JavaScript",
+        "logo": "javascript"
+      }
+    ]
+  },
+  {
+    "image": "Best-of-JS",
+    "title": "Best of JS",
+    "subtitle": "Best JS Repositories app UI",
+    "stack": [
+      {
+        "name": "React Native",
+        "logo": "react-native"
+      },
+      {
+        "name": "Expo",
+        "logo": "expo"
+      },
+      {
+        "name": "JavaScript",
+        "logo": "javascript"
+      }
+    ]
+  },
+  {
+    "image": "Moovee",
+    "title": "Moovee",
+    "subtitle": "Movie curation app UI",
+    "stack": [
+      {
+        "name": "React Native",
+        "logo": "react-native"
+      },
+      {
+        "name": "Expo",
+        "logo": "expo"
+      },
+      {
+        "name": "Redux",
+        "logo": "redux"
+      },
+      {
+        "name": "TypeScript",
+        "logo": "typescript"
+      }
+    ]
+  },
+  {
+    "image": "Payments",
+    "title": "Payments UI",
+    "subtitle": "Payments page interaction UI",
+    "stack": [
+      {
+        "name": "React Native",
+        "logo": "react-native"
+      },
+      {
+        "name": "Expo",
+        "logo": "expo"
+      },
+      {
+        "name": "JavaScript",
+        "logo": "javascript"
+      }
+    ]
+  },
+  {
+    "image": "Pill-Box",
+    "title": "IoT Pill Box",
+    "subtitle": "IoT Medicine tracker app UI",
+    "stack": [
+      {
+        "name": "React Native",
+        "logo": "react-native"
+      },
+      {
+        "name": "Expo",
+        "logo": "expo"
+      },
+      {
+        "name": "TypeScript",
+        "logo": "typescript"
+      }
+    ]
+  },
+  {
+    "image": "Quik-Jobs",
+    "title": "Quik Jobs",
+    "subtitle": "Job Finder app UI",
+    "stack": [
+      {
+        "name": "React Native",
+        "logo": "react-native"
+      },
+      {
+        "name": "Expo",
+        "logo": "expo"
+      },
+      {
+        "name": "JavaScript",
+        "logo": "javascript"
+      }
+    ]
+  },
+  {
+    "image": "Storage",
+    "title": "Fyl Manager",
+    "subtitle": "File Manager app UI",
+    "stack": [
+      {
+        "name": "React Native",
+        "logo": "react-native"
+      },
+      {
+        "name": "Expo",
+        "logo": "expo"
+      },
+      {
+        "name": "JavaScript",
+        "logo": "javascript"
+      }
+    ]
+  }
+]
