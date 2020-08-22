@@ -4,6 +4,7 @@
 .hero {
   @include box-layout;
   min-height: calc(100vh - 80px);
+  max-height: 1080px;
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
