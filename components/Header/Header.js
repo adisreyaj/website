@@ -1,5 +1,6 @@
-import styles from './Header.module.scss';
+import Link from 'next/link';
 
+import styles from './Header.module.scss';
 export default function Header() {
   return (
     <header className={styles.header}>
@@ -23,7 +24,9 @@ export default function Header() {
             <li>Home</li>
             <li>About</li>
             <li>Projects</li>
-            <li>Blog</li>
+            <Link href="/blog">
+              <li>Blog</li>
+            </Link>
           </ul>
         </nav>
       </div>

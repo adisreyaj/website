@@ -1,0 +1,7 @@
+@tailwind utilities;
+
+.post {
+  h1 {
+    @apply text-xl;
+  }
+}

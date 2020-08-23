@@ -1,4 +1,9 @@
-@import './partials/reset';
+// @import './partials/reset';
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import './partials/post';
 @import url('https://rsms.me/inter/inter.css');
 html,
 body {
