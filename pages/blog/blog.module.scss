@@ -1,0 +1,11 @@
+.heading {
+  font-weight: 700;
+}
+
+.meta {
+  &__avatar {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+  }
+}

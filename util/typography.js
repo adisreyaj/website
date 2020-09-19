@@ -17,6 +17,7 @@ SutroTheme.scaleRatio = 5 / 2;
 const typography = new Typography({
   ...SutroTheme,
   bodyFontFamily: ['Inter', 'sans-serif'],
+  headerFontFamily: ['Inter', 'sans-serif'],
 });
 
 // Hot reload typography in development.

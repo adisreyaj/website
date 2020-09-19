@@ -15,7 +15,6 @@ import { ENDPOINTS } from '../config/endpoints';
 
 export default function Home({ projects }) {
   const { scrollYProgress } = useViewportScroll();
-
   const container = {
     hidden: { opacity: 0 },
     show: {
