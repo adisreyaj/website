@@ -1,17 +1,20 @@
+import Link from 'next/link';
 import React from 'react';
 
 function BlogHeader() {
   return (
     <header className="text-gray-700 body-font bg-white shadow-custom">
       <div className="container mx-auto flex flex-wrap p-5 justify-between lex-row items-center">
-        <a className="flex title-font font-medium items-center text-gray-900">
-          <img
-            className="mb-0"
-            src="/sreyaj.svg"
-            alt="Adithya Sreyaj"
-            height="24"
-          />
-        </a>
+        <Link href="/blog">
+          <a className="flex title-font font-medium items-center text-gray-900">
+            <img
+              className="mb-0"
+              src="/sreyaj.svg"
+              alt="Adithya Sreyaj"
+              height="24"
+            />
+          </a>
+        </Link>
         <nav className="flex-wrap items-center text-base justify-center hidden md:flex">
           <a className="mr-5 hover:text-gray-900 cursor-pointer">Angular</a>
           <a className="mr-5 hover:text-gray-900 cursor-pointer">Node</a>
