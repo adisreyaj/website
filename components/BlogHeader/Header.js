@@ -16,17 +16,17 @@ function BlogHeader() {
           </a>
         </Link>
         <nav className="flex-wrap items-center text-base justify-center hidden md:flex">
-          <Link href="/blog/category/angular">
+          <Link href="/blog/categories/angular">
             <a className="mr-5 hover:text-gray-900 cursor-pointer">Angular</a>
           </Link>
-          <Link href="/blog/category/node">
+          <Link href="/blog/categories/node">
             <a className="mr-5 hover:text-gray-900 cursor-pointer">Node</a>
           </Link>
 
-          <Link href="/blog/category/html">
+          <Link href="/blog/categories/html">
             <a className="mr-5 hover:text-gray-900 cursor-pointer">HTML</a>
           </Link>
-          <Link href="/blog/category/typescript">
+          <Link href="/blog/categories/typescript">
             <a className="mr-5 hover:text-gray-900 cursor-pointer">
               TypeScript
             </a>
