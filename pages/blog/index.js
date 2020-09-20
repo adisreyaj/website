@@ -2,27 +2,16 @@ import React from 'react';
 import fs from 'fs';
 import matter from 'gray-matter';
 import Link from 'next/link';
-import BlogHeader from './Header';
-import BlogFooter from './Footer';
-import PostitemCard from './Post-item-card/Post-item-card';
+import BlogHeader from '../../components/BlogHeader/Header';
+import BlogFooter from '../../components/BlogFooter/Footer';
+import PostItemsCarousel from '../../components/PostItemsCarousel/PostItemsCarousel';
 
 export default function Home({ posts }) {
   console.log(posts);
   return (
     <div>
       <BlogHeader />
-      <section className="mt-8 mx-auto px-4 container posts-container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-        {posts.map((post) => (
-          <Link href={`/blog/${post.slug}`}>
-            <article
-              key={post.slug}
-              className="post-item p-2 flex justify-center"
-            >
-              <PostitemCard {...post} />
-            </article>
-          </Link>
-        ))}
-      </section>
+      <PostItemsCarousel posts={posts} />
       <BlogFooter />
     </div>
   );
@@ -43,9 +32,7 @@ export async function getStaticProps() {
     };
     const formattedDate = data.date.toLocaleDateString('en-US', options);
     return {
-      ...data,
-      date: formattedDate,
-      slug: fileName.replace('.md', ''),
+      data: { ...data, date: formattedDate, slug: fileName.replace('.md', '') },
     };
   });
   return {

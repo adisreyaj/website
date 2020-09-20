@@ -2,10 +2,12 @@
 title: Demystifying Form Arrays in Angular
 description: The first post is the most memorable one.
 date: 2020-04-16
-image: bg.jpg
+image: bg
 author: Adithya Sreyaj
 twitter: http://twitter.com/adisreyaj
 github: http://github.com/adisreyaj
+category: angular
+tags: [Angular, TypeScript, Angular Material]
 ---
 
 Angular is a great framework, there is no doubt in that. There is pretty much everything you would need when building a web application. One of the main things in applications like CRM, SAAS applications are user inputs.

@@ -5,27 +5,37 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "cache-posts": "node util/cache-posts"
   },
   "dependencies": {
     "@mdx-js/loader": "^1.6.16",
     "@next/mdx": "^9.5.2",
     "framer-motion": "^2.3.0",
+    "fuse.js": "^6.4.1",
     "next": "9.5.1",
+    "next-seo": "^4.7.3",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-typography": "^0.16.19",
     "react-use": "^15.3.3",
     "sass": "^1.26.10",
     "typography": "^0.16.19",
-    "typography-theme-sutro": "^0.16.19"
+    "typography-theme-sutro": "^0.16.19",
+    "voca": "^1.4.0"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^2.3.0",
     "gray-matter": "^4.0.2",
+    "husky": "^4.3.0",
     "postcss-import": "^12.0.1",
     "postcss-preset-env": "^6.7.0",
     "react-markdown": "^4.3.1",
     "tailwindcss": "^1.7.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run cache-posts && git add cache/posts.json"
+    }
   }
 }

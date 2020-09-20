@@ -1,6 +1,6 @@
 import React from 'react';
-import styles from './Post-item-card.module.scss';
-function PostitemCard({ image, title, author, date }) {
+import styles from './PostItemCard.module.scss';
+function PostitemCard({ image, title, author, date, category }) {
   return (
     <div
       className={[
@@ -19,7 +19,7 @@ function PostitemCard({ image, title, author, date }) {
       <header>
         <img
           className="rounded-tl-md rounded-tr-md"
-          src={`/feature-images/${image}`}
+          src={`/feature-images/${image}.jpg`}
           alt={title}
         />
       </header>
@@ -41,6 +41,12 @@ function PostitemCard({ image, title, author, date }) {
               <p className="text-gray-600 text-xs">{date}</p>
             </div>
           </div>
+          <img
+            className="mr-2"
+            style={{ width: 25, height: 25 }}
+            src={`/technologies/${category}.svg`}
+            alt={category}
+          />
         </div>
       </section>
     </div>

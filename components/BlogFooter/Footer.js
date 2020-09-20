@@ -2,7 +2,7 @@ import React from 'react';
 
 function BlogFooter() {
   return (
-    <footer className=" mt-12 text-gray-700 body-font border-t border-solid border-r-0 border-l-0 border-b-0 border-gray-400">
+    <footer className=" mt-12 text-gray-700 body-font border-t border-solid border-r-0 border-l-0 border-b-0 border-gray-300">
       <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
         <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
           <img src="/sreyaj.svg" alt="" />
