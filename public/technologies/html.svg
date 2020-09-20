@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="194" height="194" viewBox="0 0 194 194">
+  <g id="html" transform="translate(-0.239 0.157)">
+    <path id="Intersection_3" data-name="Intersection 3" d="M0,97a97,97,0,1,1,97,97A97,97,0,0,1,0,97Z" transform="translate(0.239 -0.157)" fill="#f16529"/>
+    <g id="Group_38" data-name="Group 38" transform="translate(49.898 44.037)">
+      <path id="Path_28" data-name="Path 28" d="M350.758,341.328H325.917L324.2,322.1h26.557V303.33H303.683l.45,5.036,4.614,51.734h42.011Zm0,48.756-.082.023-20.908-5.646-1.337-14.972H309.586l2.63,29.477,38.456,10.675.086-.024Z" transform="translate(-303.683 -303.33)" fill="#fff"/>
+      <path id="Path_30" data-name="Path 30" d="M441.617,341.328V360.1h23.118l-2.18,24.348L441.617,390.1V409.63L480.1,398.965l.282-3.173,4.412-49.423.458-5.041H441.617Zm0-38V322.1h45.347l.376-4.22.855-9.517.449-5.036Z" transform="translate(-394.606 -303.33)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

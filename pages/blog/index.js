@@ -7,7 +7,6 @@ import BlogFooter from '../../components/BlogFooter/Footer';
 import PostItemsCarousel from '../../components/PostItemsCarousel/PostItemsCarousel';
 
 export default function Home({ posts }) {
-  console.log(posts);
   return (
     <div>
       <BlogHeader />

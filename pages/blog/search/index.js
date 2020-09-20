@@ -6,7 +6,6 @@ import PostItemsCarousel from '../../../components/PostItemsCarousel/PostItemsCa
 import { ENDPOINTS } from '../../../config/endpoints';
 
 function Search({ posts }) {
-  console.log(posts);
   return (
     <>
       <div>

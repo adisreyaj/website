@@ -20,7 +20,7 @@ export default function Post({ data, content }) {
         <div className="mb-10">
           <BlogHeader />
         </div>
-        <div className="post px-6 md:px-8">
+        <div className="box-layout px-6 md:px-8">
           <section className="post__header">
             <img
               src={`/feature-images/${data.image}.jpg`}
@@ -76,12 +76,12 @@ export default function Post({ data, content }) {
             <ReactMarkdown escapeHtml={false} source={content} />
           </section>
           <section className="mt-12 flex items-center">
-            <p className="mr-3 font-medium text-lg">Tags:</p>
+            <p className="mr-3 font-medium text-md">Tags:</p>
             <div className="flex">
               {data.tags.map((tag, index) => (
                 <p
                   key={index}
-                  className="mr-2 text-gray-600 hover:text-primary cursor-pointer"
+                  className="mr-2 text-sm text-gray-600 hover:text-primary cursor-pointer"
                 >
                   #{tag}
                   {index !== data.tags.length - 1 ? ',' : ''}

@@ -16,10 +16,21 @@ function BlogHeader() {
           </a>
         </Link>
         <nav className="flex-wrap items-center text-base justify-center hidden md:flex">
-          <a className="mr-5 hover:text-gray-900 cursor-pointer">Angular</a>
-          <a className="mr-5 hover:text-gray-900 cursor-pointer">Node</a>
-          <a className="mr-5 hover:text-gray-900 cursor-pointer">HTML</a>
-          <a className="mr-5 hover:text-gray-900 cursor-pointer">TypeScript</a>
+          <Link href="/blog/category/angular">
+            <a className="mr-5 hover:text-gray-900 cursor-pointer">Angular</a>
+          </Link>
+          <Link href="/blog/category/node">
+            <a className="mr-5 hover:text-gray-900 cursor-pointer">Node</a>
+          </Link>
+
+          <Link href="/blog/category/html">
+            <a className="mr-5 hover:text-gray-900 cursor-pointer">HTML</a>
+          </Link>
+          <Link href="/blog/category/typescript">
+            <a className="mr-5 hover:text-gray-900 cursor-pointer">
+              TypeScript
+            </a>
+          </Link>
         </nav>
 
         <div className="block md:hidden">

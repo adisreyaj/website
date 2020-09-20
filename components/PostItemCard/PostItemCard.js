@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 import styles from './PostItemCard.module.scss';
 function PostitemCard({ image, title, author, date, category }) {
@@ -41,12 +42,14 @@ function PostitemCard({ image, title, author, date, category }) {
               <p className="text-gray-600 text-xs">{date}</p>
             </div>
           </div>
-          <img
-            className="mr-2"
-            style={{ width: 25, height: 25 }}
-            src={`/technologies/${category}.svg`}
-            alt={category}
-          />
+          <Link href={`/blog/categories/${category}`}>
+            <img
+              className="mr-2"
+              style={{ width: 25, height: 25 }}
+              src={`/technologies/${category}.svg`}
+              alt={category}
+            />
+          </Link>
         </div>
       </section>
     </div>
