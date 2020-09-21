@@ -11,7 +11,7 @@ import Header from '../components/Header/Header';
 import SectionHeading from '../components/SectionHeading/SectionHeading';
 import ProjectItem from '../components/ProjectItem/ProjectItem';
 import IntersectionContainer from '../components/IntersectionContainer';
-import { ENDPOINTS } from '../config/endpoints';
+import { ENDPOINTS } from '../config/api.config';
 
 export default function Home({ projects }) {
   const { scrollYProgress } = useViewportScroll();
