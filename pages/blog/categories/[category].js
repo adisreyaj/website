@@ -11,10 +11,10 @@ function Category({ posts, category }) {
   return (
     <>
       <div>
-        <div className="mb-10">
+        <div>
           <BlogHeader />
         </div>
-        <section>
+        <section className="content">
           <h2></h2>
           {!!posts && posts.length > 0 && <PostItemsCarousel posts={posts} />}
         </section>

@@ -4,7 +4,7 @@ import PostitemCard from '../PostItemCard/PostItemCard';
 
 function PostItemsCarousel({ posts }) {
   return (
-    <section className="mt-8 mx-auto px-4 container posts-container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+    <section className="mx-auto px-4 container posts-container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
       {posts.map(({ data }) => (
         <Link href={`/blog/${data.slug}`}>
           <article

@@ -4,8 +4,11 @@
 @import 'tailwindcss/utilities';
 
 @import './partials/post';
+@import './partials/blog';
 @import url('https://rsms.me/inter/inter.css');
-
+html {
+  overflow-y: auto;
+}
 html,
 body {
   padding: 0;

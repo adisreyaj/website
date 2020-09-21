@@ -10,7 +10,9 @@ export default function Home({ posts }) {
   return (
     <div>
       <BlogHeader />
-      <PostItemsCarousel posts={posts} />
+      <section className="content">
+        <PostItemsCarousel posts={posts} />
+      </section>
       <BlogFooter />
     </div>
   );

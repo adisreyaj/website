@@ -4,14 +4,20 @@ import React from 'react';
 function BlogHeader() {
   return (
     <header className="text-gray-700 body-font bg-white shadow-custom">
-      <div className="container mx-auto flex flex-wrap p-5 justify-between lex-row items-center">
+      <div className="container mx-auto flex flex-wrap px-5 py-3 justify-between lex-row items-center">
         <Link href="/blog">
           <a className="flex title-font font-medium items-center text-gray-900">
             <img
-              className="mb-0"
-              src="/sreyaj.svg"
+              className="mb-0 hidden sm:block"
+              src="/dcode.svg"
               alt="Adithya Sreyaj"
-              height="24"
+              height="40"
+            />
+            <img
+              className="mb-0 sm:hidden"
+              src="/dcode-logo.svg"
+              alt="Adithya Sreyaj"
+              height="40"
             />
           </a>
         </Link>

@@ -8,10 +8,10 @@ function CategoryLandingPage() {
   return (
     <>
       <div>
-        <section className="mb-10">
+        <section>
           <BlogHeader />
         </section>
-        <section className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4  gap-4 box-layout px-4">
+        <section className="content grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4  gap-4 box-layout px-4">
           {CATEGORIES.map((category) => {
             return (
               <article className="flex flex-col">
