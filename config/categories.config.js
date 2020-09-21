@@ -1,1 +1,8 @@
-export const CATEGORIES = ['angular', 'node', 'html', 'typescript'];
+export const CATEGORIES = [
+  'angular',
+  'node',
+  'react',
+  'html',
+  'typescript',
+  'nest',
+];

@@ -52,9 +52,13 @@ li {
     0 9.6px 24.1px rgba(0, 0, 0, 0.02), 0 32px 80px rgba(0, 0, 0, 0.03);
 }
 
+.container {
+  max-width: 960px;
+}
 .box-layout {
   margin: 0 auto;
   max-width: 850px;
+  width: 100%;
 }
 
 @import './partials/colors';
