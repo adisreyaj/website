@@ -20,7 +20,7 @@ export default function Post({ data, content }) {
         <div className="mb-10">
           <BlogHeader />
         </div>
-        <div className="box-layout px-6 md:px-8">
+        <div className="content box-layout px-6 md:px-8">
           <section className="post__header">
             <img
               src={`/feature-images/${data.image}.jpg`}

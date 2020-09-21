@@ -44,6 +44,7 @@ export default function Home({ projects }) {
           <title>Adithya Sreyaj - Full Stack Developer</title>
           <link rel="icon" href="/favicon.ico" />
           <meta name="theme-color" content="#083d77" />
+          <link rel="manifest" href="/manifest.json" />
         </Head>
         <Header />
         <main className={styles.main}>
