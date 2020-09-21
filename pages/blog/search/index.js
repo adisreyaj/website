@@ -1,4 +1,3 @@
-import { NextSeo } from 'next-seo';
 import React from 'react';
 import BlogFooter from '../../../components/BlogFooter/Footer';
 import BlogHeader from '../../../components/BlogHeader/Header';

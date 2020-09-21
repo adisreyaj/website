@@ -5,7 +5,7 @@ function PostitemCard({ image, title, author, date, category }) {
   return (
     <div
       className={[
-        'bg-white',
+        'bg-emphasis',
         'shadow-xs',
         'cursor-pointer',
         'rounded-md',

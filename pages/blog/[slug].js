@@ -16,7 +16,7 @@ export default function Post({ data, content }) {
   return (
     <>
       <NextSeo {...getSEOMetaData(data)} />
-      <div>
+      <div className="bg-body">
         <div className="mb-10">
           <BlogHeader />
         </div>
@@ -43,7 +43,7 @@ export default function Post({ data, content }) {
               'border-l-0',
               'border-b',
               'border-solid',
-              'border-gray-300',
+              'border-primary',
             ].join(' ')}
           >
             <div className="flex flex-row justify-between w-full">
@@ -55,7 +55,7 @@ export default function Post({ data, content }) {
                 />
                 <div>
                   <p className="font-bold">{data.author}</p>
-                  <p className="text-sm text-gray-800">
+                  <p className="text-sm text-secondary">
                     Published on{' '}
                     <span className="font-medium">{data.date}</span>
                   </p>
@@ -81,7 +81,7 @@ export default function Post({ data, content }) {
               {data.tags.map((tag, index) => (
                 <p
                   key={index}
-                  className="mr-2 text-sm text-gray-600 hover:text-primary cursor-pointer"
+                  className="mr-2 text-sm text-secondary hover:text-primary cursor-pointer"
                 >
                   #{tag}
                   {index !== data.tags.length - 1 ? ',' : ''}

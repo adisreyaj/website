@@ -9,7 +9,7 @@ function CategoryCarousel() {
         return (
           <article className="flex flex-col">
             <div
-              className="bg-white p-4 rounded-md shadow-xs cursor-pointer bg-no-repeat transform transition-transform duration-300 hover:shadow-md hover:-translate-y-1"
+              className="bg-emphasis p-4 rounded-md shadow-xs cursor-pointer bg-no-repeat transform transition-transform duration-300 hover:shadow-md hover:-translate-y-1"
               style={{
                 backgroundPosition: 'center',
                 backgroundImage: `url('/technologies/${category}-bg.svg')`,
