@@ -2,7 +2,7 @@ import React from 'react';
 import BlogFooter from '../../../components/BlogFooter/Footer';
 import BlogHeader from '../../../components/BlogHeader/Header';
 import PostItemsCarousel from '../../../components/PostItemsCarousel/PostItemsCarousel';
-import { ENDPOINTS } from '../../../config/endpoints';
+import { ENDPOINTS } from '../../../config/api.config';
 
 function Search({ posts }) {
   return (
